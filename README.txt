@@ -30,4 +30,7 @@ Improvements & Changes:
 
     $('a').tipTip({content: function($el, opts) { return somefn($el, opts); } });
 
+2. 'keepAlive' is not correct in IE, because when tipTip_holder has a transparent background, IE will trigger mouseleave event
+even when the mouse is over the elements.
+
 3. fix rgba bug in IE, which cause the empty background for tip container, described http://css-tricks.com/ie-background-rgb-bug/
