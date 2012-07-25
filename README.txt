@@ -34,4 +34,4 @@ Improvements & Changes:
 
     $('div').tipTip({delegate:true, delegateSelector:'a'}); // it will create tipTip on the 'a' elements in 'div'
 
-3. fix rgba bug in IE, which cause the empty background for tip container, described [here](http://css-tricks.com/ie-background-rgb-bug/)
+3. fix rgba bug in IE, which cause the empty background for tip container, described http://css-tricks.com/ie-background-rgb-bug/
