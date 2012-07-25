@@ -18,3 +18,18 @@ browser window. It is completely customizable as well via CSS.
 This TipTip jQuery plug-in is dual licensed under the MIT and GPL licenses:
 http://www.opensource.org/licenses/mit-license.php
 http://www.gnu.org/licenses/gpl.html
+
+---
+
+Improvements & Changes:
+
+@author: villadora
+@date: 2012-7-23
+
+1. enable adding callback for content options, so you can use tipTip like:
+
+    $('a').tipTip({content: function($el, opts) { return somefn($el, opts); } });
+
+2. using delegate to register events for future elements: 
+
+    $('div').tipTip({delegate:true, delegateSelector:'a'}); // it will create tipTip on the 'a' elements in 'div'
