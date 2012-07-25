@@ -17,6 +17,15 @@
  * This TipTip jQuery plug-in is dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
+ *
+ *
+ *
+ * Has been changed:
+ *
+ * @author: 'weig'
+ * @date: 2012-7-25
+ *
+ * @changes: make functions become candidates for content options, which means people can use content togenerate dynamic tipTip content
  */
 
 (function($){
@@ -52,10 +61,11 @@
 		return this.each(function(){
 			var org_elem = $(this);
 			if(opts.content){
-				var org_title = opts.content;
+			    var org_title = $.isFunction(opts.content) ?opts.content(org_elem, opts):opts.content;
 			} else {
 				var org_title = org_elem.attr(opts.attribute);
 			}
+                    var selector = opts.selector;
 			if(org_title != ""){
 				if(!opts.content){
 					org_elem.removeAttr(opts.attribute); //remove original Attribute
@@ -76,7 +86,7 @@
 						});
 					}
 				} else if(opts.activation == "focus"){
-					org_elem.focus(function(){
+					org_elem.focus(function(e){
 						active_tiptip();
 					}).blur(function(){
 						deactive_tiptip();
@@ -97,7 +107,7 @@
 					}
 				}
 			
-				function active_tiptip(){
+				function active_tiptip(el){
 					opts.enter.call(this);
 					tiptip_content.html(org_title);
 					tiptip_holder.hide().removeAttr("class").css("margin","0");
