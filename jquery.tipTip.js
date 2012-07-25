@@ -81,7 +81,7 @@
 						}
 					});
 					if(opts.keepAlive){
-						tiptip_holder.hover(function(){}, function(){
+						tiptip_content.hover(function(){}, function(){
 							deactive_tiptip();
 						});
 					}
@@ -101,7 +101,7 @@
 						}
 					});
 					if(opts.keepAlive){
-						tiptip_holder.hover(function(){}, function(){
+						tiptip_content.hover(function(){}, function(){
 							deactive_tiptip();
 						});
 					}
