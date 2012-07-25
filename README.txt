@@ -33,3 +33,5 @@ Improvements & Changes:
 2. using delegate to register events for future elements: 
 
     $('div').tipTip({delegate:true, delegateSelector:'a'}); // it will create tipTip on the 'a' elements in 'div'
+
+3. fix rgba bug in IE, which cause the empty background for tip container, described [here](http://css-tricks.com/ie-background-rgb-bug/)
