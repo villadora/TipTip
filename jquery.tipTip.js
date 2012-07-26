@@ -107,8 +107,8 @@
 					}
 				}
 			
-				function active_tiptip(el){
-					opts.enter.call(this);
+				function active_tiptip(){
+				    opts.enter.call(this,org_elem);
 					tiptip_content.html(org_title);
 					tiptip_holder.hide().removeAttr("class").css("margin","0");
 					tiptip_arrow.removeAttr("style");
@@ -191,11 +191,11 @@
 				}
 				
 				function deactive_tiptip(){
-					opts.exit.call(this);
+    				    opts.exit.call(this,org_elem);
 					if (timeout){ clearTimeout(timeout); }
 					tiptip_holder.fadeOut(opts.fadeOut);
 				}
 			}				
 		});
 	}
-})(jQuery);  	
+})(jQuery); 
