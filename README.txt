@@ -24,7 +24,7 @@ http://www.gnu.org/licenses/gpl.html
 Improvements & Changes:
 
 @author: villadora
-@date: 2012-7-23
+@date: 2012-9-22
 
 1. enable adding callback for content options, so you can use tipTip like:
 
@@ -33,3 +33,5 @@ Improvements & Changes:
 2. 'keepAlive' is not correct in IE, because when tipTip_holder has a transparent background, IE will trigger mouseleave event even when the mouse is over the elements.
 
 3. fix rgba bug in IE, which cause the empty background for tip container, described http://css-tricks.com/ie-background-rgb-bug/
+
+4.  add 'aliveDelay' property, sometimes the pop tips will last forever until user moves mouse over it again. with 'aliveDelay' the pop tips will disappear automatically after time set in 'aliveDelay'.
