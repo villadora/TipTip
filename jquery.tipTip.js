@@ -23,10 +23,9 @@
  * Has been changed:
  *
  * @author: 'weig'
- * @date: 2012-7-25
+ * @date: 2012-9-22
  *
  * @changes: make functions become candidates for content options, which means people can use content togenerate dynamic tipTip content
- *           add auto fade out when keepAlive is true.
  */
 
 (function($){
